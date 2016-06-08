@@ -15,7 +15,7 @@ public class TestCameraShake : MonoBehaviour {
 	public float duration = 0.5f;
 	//uncomment the following line and pass it in the Shake call in update if you want
 	//to change when the damping starts
-	//public float dampStart = 0.75f; 
+	public float dampStart = 0.75f; 
 	public bool testShake = false;
 
 	private CameraShake cameraShake;
@@ -31,7 +31,7 @@ public class TestCameraShake : MonoBehaviour {
 			testShake = false;
 			//there's an optional third parameter available for those that want to
 			//experiment with when the damping starts
-			cameraShake.Shake(amplitude, duration);
+			cameraShake.Shake(amplitude, duration, dampStart);
 		}
 	}
 }
